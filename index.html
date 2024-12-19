@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тесты на самопознание</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Страница приветствия -->
+        <div class="welcome-page" id="welcomePage">
+            <h1>Добро пожаловать на сайт с тестами!</h1>
+            <p>Здесь вы можете пройти интересные тесты и узнать больше о себе.</p>
+            <button class="btn" onclick="startChoosingTest()">Перейти к выбору тестов</button>
+        </div>
+
+        <!-- Страница выбора тестов -->
+        <div class="test-selection-page" id="testSelectionPage">
+            <h2>Выберите тест</h2>
+            <ul>
+                <li><button class="btn" onclick="startTest('test1')">Тест 1: Настроение</button></li>
+                <li><button class="btn" onclick="startTest('test2')">Тест 2: Личность</button></li>
+                <li><button class="btn" onclick="startTest('test3')">Тест 3: Город</button></li>
+                <li><button class="btn" onclick="startTest('test4')">Тест 4: Поведение</button></li>
+            </ul>
+        </div>
+
+        <!-- Страница теста -->
+        <div class="test-page" id="testPage">
+            <div id="questionContainer"></div>
+            <button class="btn" id="finishButton" onclick="finishTest()">Завершить тест</button>
+        </div>
+
+        <!-- Страница с результатами -->
+        <div class="result-page" id="resultPage">
+            <h3>Результаты теста</h3>
+            <p id="resultText"></p>
+            <p id="resultAnalysis"></p>
+            <button class="btn" onclick="restartTest()">Пройти тест снова</button>
+            <button class="btn" onclick="startChoosingTest()">Выбрать другой тест</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
